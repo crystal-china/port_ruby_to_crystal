@@ -15,7 +15,7 @@ def replace(code)
   code.gsub!(/\battr_reader\b/, 'getter')
   code.gsub!(/\battr_writer\b/, 'setter')
   code.gsub!("__dir__", '__DIR__')
-  code.gsub!(/(\()?(&):(\w+)(\))?/,  ' \2.\3')
+  code.gsub!(/(&):([\w?]+)/,  '\1.\2')
 end
 
 if ARGV[0] == '--test'

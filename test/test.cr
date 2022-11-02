@@ -16,8 +16,9 @@ end
 
 __DIR__
 
+["a", "b"].map(&.upcase)
 ["a", "b"].map &.upcase
-["a", "b"].map  &.upcase
+["a", "b"].map &.empty?
 
 "hello".ends_with? "lo"
 "hello".starts_with? "he"
