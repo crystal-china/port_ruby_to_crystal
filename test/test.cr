@@ -27,3 +27,5 @@ File.read_lines("./test/test.rb")
 
 require "file_utils"
 require "file_utils"
+
+File.info("./test/test.rb").modification_time

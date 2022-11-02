@@ -27,3 +27,5 @@ File.readlines("./test/test.rb")
 
 require 'fileutils'
 require "fileutils"
+
+File.mtime("./test/test.rb")
