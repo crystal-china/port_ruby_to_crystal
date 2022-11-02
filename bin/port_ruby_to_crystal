@@ -18,6 +18,7 @@ def replace(code)
   code.gsub!(/\battr_writer\b/, 'setter')
   code.gsub!("__dir__", '__DIR__')
   code.gsub!(/(&):([\w?]+)/,  '\1.\2')
+  code.gsub!(/\braise ([\w:]+),(\s*)/, 'raise \1.new\2')
 end
 
 if ARGV[0] == '--test'

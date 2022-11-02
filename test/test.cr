@@ -31,3 +31,8 @@ require "file_utils"
 File.info("./test/test.rb").modification_time
 
 Process.pgid(Process.pid)
+
+begin
+  raise RuntimeError.new "Failed"
+rescue
+end

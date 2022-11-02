@@ -31,3 +31,8 @@ require "fileutils"
 File.mtime("./test/test.rb")
 
 Process.getpgid(Process.pid)
+
+begin
+  raise RuntimeError, "Failed"
+rescue
+end
