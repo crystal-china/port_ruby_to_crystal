@@ -3,6 +3,7 @@
 def replace(code)
   code.gsub!(/\bFile\.exist\?(\s*)/, 'File.exists?\1')
   code.gsub!(/\bFile\.readlines\b/, 'File.read_lines')
+  code.gsub!(/\bProcess\.getpgid\b/, 'Process.pgid')
   code.gsub!(/\bFile\.mtime\((.*)\)/, 'File.info(\1).modification_time')
   code.gsub!(/\bYAML\.load\b/, 'YAML.parse')
   code.gsub!(/require (?:'|")fileutils(?:'|")(\s*)/, 'require "file_utils"\1')

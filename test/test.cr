@@ -29,3 +29,5 @@ require "file_utils"
 require "file_utils"
 
 File.info("./test/test.rb").modification_time
+
+Process.pgid(Process.pid)

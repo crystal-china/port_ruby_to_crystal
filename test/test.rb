@@ -29,3 +29,5 @@ require 'fileutils'
 require "fileutils"
 
 File.mtime("./test/test.rb")
+
+Process.getpgid(Process.pid)
