@@ -1,0 +1,31 @@
+#!/bin/env ruby
+
+def replace(code)
+  code.gsub!(/\bFile\.exist\?(\s*)/, 'File.exists?\1')
+  code.gsub!(/\bFile\.readlines\b/, 'File.read_lines')
+  code.gsub!(/\bYAML\.load\b/, 'YAML.parse')
+  code.gsub!(/require (?:'|")fileutils(?:'|")(\s*)/, 'require "file_utils"\1')
+  code.gsub!(/\.respond_to\?(\s*)/, '.responds_to?\1')
+  code.gsub!(/\brequire_relative\b/, 'require')
+  code.gsub!(/\.include\?(\s*)/, '.includes?\1')
+  code.gsub!(/\.end_with\?(\s*)/, '.ends_with?\1')
+  code.gsub!(/\.start_with\?(\s*)/, '.starts_with?\1')
+  code.gsub!(/(\w+\[.*?\]) \|\|/, '\1? ||')
+  code.gsub!(/\battr_accessor\b/, 'property')
+  code.gsub!(/\battr_reader\b/, 'getter')
+  code.gsub!(/\battr_writer\b/, 'setter')
+  code.gsub!("__dir__", '__DIR__')
+  code.gsub!(/(\()?(&):(\w+)(\))?/,  ' \2.\3')
+end
+
+if ARGV[0] == '--test'
+  code = File.read('test/test.rb')
+  replace(code)
+  File.write('test/test.cr', code)
+else
+  Dir.glob("**/*.cr").each do |cr_file|
+    code = File.read(cr_file)
+    replace(code)
+    File.write(cr_file, code)
+  end
+end
