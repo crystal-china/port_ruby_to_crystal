@@ -19,6 +19,7 @@ def replace(code)
   code.gsub!("__dir__", '__DIR__')
   code.gsub!(/(&):([\w?]+)/,  '\1.\2')
   code.gsub!(/\braise ([\w:]+),(\s*)/, 'raise \1.new\2')
+  code.gsub!(/\bErrno::EADDRINUSE\b/, 'Socket::BindError')
 end
 
 if ARGV[0] == '--test'

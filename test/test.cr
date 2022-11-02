@@ -36,3 +36,7 @@ begin
   raise RuntimeError.new "Failed"
 rescue
 end
+
+require "socket"
+
+Socket::BindError

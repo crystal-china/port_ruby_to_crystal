@@ -36,3 +36,7 @@ begin
   raise RuntimeError, "Failed"
 rescue
 end
+
+require "socket"
+
+Errno::EADDRINUSE
