@@ -2,8 +2,9 @@ File.exist?("ruby")
 "hello".respond_to? :size
 require_relative "./empty"
 
-arr = {"world" => 100}
-arr["hello"] || "world"
+arr = {"foo1" => "bar1"}
+arr["foo2"] || "bar2"
+arr["foo3"] ||= "bar3"
 
 ["hello", "world"].include? "hello"
 

@@ -10,7 +10,7 @@ def replace(code)
   code.gsub!(/\.include\?(\s*)/, '.includes?\1')
   code.gsub!(/\.end_with\?(\s*)/, '.ends_with?\1')
   code.gsub!(/\.start_with\?(\s*)/, '.starts_with?\1')
-  code.gsub!(/(\w+\[.*?\]) \|\|/, '\1? ||')
+  code.gsub!(/(\w+\[.*?\]) \|\|(?!=)/, '\1? ||')
   code.gsub!(/\battr_accessor\b/, 'property')
   code.gsub!(/\battr_reader\b/, 'getter')
   code.gsub!(/\battr_writer\b/, 'setter')
@@ -28,4 +28,5 @@ else
     replace(code)
     File.write(cr_file, code)
   end
+  crystal tool format
 end
