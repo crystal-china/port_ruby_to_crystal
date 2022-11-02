@@ -28,5 +28,5 @@ else
     replace(code)
     File.write(cr_file, code)
   end
-  crystal tool format
+  system('crystal tool format')
 end
