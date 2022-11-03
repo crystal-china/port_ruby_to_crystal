@@ -24,7 +24,6 @@ __dir__
 "hello".start_with? "he"
 
 File.readlines("./test/test.rb")
-
 require 'fileutils'
 require "fileutils"
 
@@ -42,3 +41,6 @@ require "socket"
 Errno::EADDRINUSE
 Time.now.strftime("%Y%m%d")
 Time.now.strftime('%-Y%m%d')
+
+Dir.chdir("/") { }
+Dir.pwd

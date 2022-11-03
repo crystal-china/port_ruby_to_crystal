@@ -24,7 +24,6 @@ __DIR__
 "hello".starts_with? "he"
 
 File.read_lines("./test/test.rb")
-
 require "file_utils"
 require "file_utils"
 
@@ -42,3 +41,6 @@ require "socket"
 Socket::BindError
 Time.local.to_s("%Y%m%d")
 Time.local.to_s("%-Y%m%d")
+
+Dir.cd("/") { }
+Dir.current
