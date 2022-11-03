@@ -40,3 +40,4 @@ end
 require "socket"
 
 Socket::BindError
+Time.local

@@ -40,3 +40,4 @@ end
 require "socket"
 
 Errno::EADDRINUSE
+Time.now
