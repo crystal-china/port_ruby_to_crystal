@@ -40,4 +40,5 @@ end
 require "socket"
 
 Errno::EADDRINUSE
-Time.now
+Time.now.strftime("%Y%m%d")
+Time.now.strftime('%-Y%m%d')

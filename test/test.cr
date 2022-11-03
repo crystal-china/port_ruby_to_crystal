@@ -40,4 +40,5 @@ end
 require "socket"
 
 Socket::BindError
-Time.local
+Time.local.to_s("%Y%m%d")
+Time.local.to_s("%-Y%m%d")
