@@ -46,3 +46,4 @@ Dir.cd("/") { }
 Dir.current
 
 # Process.signal
+# Process.new
