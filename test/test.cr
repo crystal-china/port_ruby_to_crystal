@@ -44,3 +44,5 @@ Time.local.to_s("%-Y%m%d")
 
 Dir.cd("/") { }
 Dir.current
+
+# Process.signal

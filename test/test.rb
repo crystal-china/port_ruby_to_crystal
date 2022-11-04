@@ -44,3 +44,5 @@ Time.now.strftime('%-Y%m%d')
 
 Dir.chdir("/") { }
 Dir.pwd
+
+# Process.kill
