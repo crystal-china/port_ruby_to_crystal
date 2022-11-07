@@ -15,10 +15,11 @@ Before this step, it's a good idea to use rubocop to make some style changes.
 e.g. change all single-quoted strings to double-quoted strings.
 
 ```sh
-$: port_ruby_to_crystal
+$ cd you_project_root
+$: path/to/port_ruby_to_crystal
 ```
 
-This project can also be used as a learning resource to see exactly what Ruby APIs are different with Crystal, just check the diff `./test/test.cr` with `./test/test.cr`.
+This project can also be used as a learning resource to see exactly what Ruby APIs are different with Crystal, just check the diff of `./test/test.rb` with `./test/test.cr`.
 
 # Run test
 
