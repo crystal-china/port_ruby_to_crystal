@@ -58,3 +58,7 @@ pid = ::Process.fork { sleep 0.1 }
 
 "hello".rstrip("lo")
 "hello".lstrip("he")
+
+STDIN
+STDOUT.print ""
+STDERR.puts ""

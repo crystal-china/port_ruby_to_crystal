@@ -30,6 +30,9 @@ def replace(code)
   code.gsub!(/\b\.strftime(?:\(|\s+)(?:"|')(.+?)(?:"|')\)?/, '.to_s("\1")')
   code.gsub!(/\.delete_suffix\b/, '.rstrip')
   code.gsub!(/\.delete_prefix\b/, '.lstrip')
+  code.gsub!(/\$stdin\b/, '\1STDIN')
+  code.gsub!(/\$stdout\b/, '\1STDOUT')
+  code.gsub!(/\$stderr\b/, '\1STDERR')
 end
 
 if ARGV[0] == '--test'

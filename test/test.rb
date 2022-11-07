@@ -58,3 +58,7 @@ pid = fork { sleep 0.1 }
 
 "hello".delete_suffix("lo")
 "hello".delete_prefix("he")
+
+$stdin
+$stdout.print ""
+$stderr.puts ""
