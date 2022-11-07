@@ -30,7 +30,7 @@ require "file_utils"
 
 File.info("./test/test.rb").modification_time
 
-::Process.pgid(Process.pid)
+Process.pgid(Process.pid)
 
 begin
   raise RuntimeError.new "Failed"
@@ -46,8 +46,8 @@ Time.local.to_s("%-Y%m%d")
 Dir.cd("/") { }
 Dir.current
 
-# ::Process.signal
-# ::Process.new
+# Process.signal
+# Process.new
 ::Process.exec("true")
 
 pid = ::Process.fork do
@@ -55,3 +55,6 @@ pid = ::Process.fork do
 end
 
 pid = ::Process.fork { sleep 0.1 }
+
+"hello".rstrip("lo")
+"hello".lstrip("he")

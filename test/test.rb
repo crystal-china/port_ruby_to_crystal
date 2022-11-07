@@ -55,3 +55,6 @@ pid = fork do
 end
 
 pid = fork { sleep 0.1 }
+
+"hello".delete_suffix("lo")
+"hello".delete_prefix("he")
