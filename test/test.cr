@@ -47,6 +47,7 @@ Dir.current
 
 # Process.signal
 # Process.new
+Process.exec("true")
 
 pid = Process.fork do
   sleep 0.1

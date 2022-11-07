@@ -47,6 +47,7 @@ Dir.pwd
 
 # Process.kill
 # Process.spawn
+exec("true")
 
 pid = fork do
   sleep 0.1
