@@ -33,6 +33,7 @@ def replace(code)
   code.gsub!(/\$stdin\b/, '\1STDIN')
   code.gsub!(/\$stdout\b/, '\1STDOUT')
   code.gsub!(/\$stderr\b/, '\1STDERR')
+  code.gsub!(/([\w?!]+)&\.([\w?!]+)\b/, '\1.try &.\2')
 end
 
 if ARGV[0] == '--test'

@@ -62,3 +62,5 @@ pid = fork { sleep 0.1 }
 $stdin
 $stdout.print ""
 $stderr.puts ""
+
+nil&.nil?

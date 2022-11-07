@@ -62,3 +62,5 @@ pid = ::Process.fork { sleep 0.1 }
 STDIN
 STDOUT.print ""
 STDERR.puts ""
+
+nil.try &.nil?
