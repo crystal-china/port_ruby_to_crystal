@@ -48,6 +48,7 @@ Dir.current
 
 # Process.signal
 # Process.new
+# RuntimeError
 ::Process.exec("true")
 
 pid = ::Process.fork do

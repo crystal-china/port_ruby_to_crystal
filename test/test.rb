@@ -48,6 +48,7 @@ Dir.pwd
 
 # Process.kill
 # Process.spawn
+# Errno::ESRCH
 exec("true")
 
 pid = fork do
