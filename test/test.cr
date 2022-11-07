@@ -5,6 +5,7 @@ require "./empty"
 arr = {"foo1" => "bar1"}
 arr["foo2"]? || "bar2"
 arr["foo3"] ||= "bar3"
+arr["foo1"]? && "ok"
 
 ["hello", "world"].includes? "hello"
 
