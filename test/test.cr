@@ -47,3 +47,9 @@ Dir.current
 
 # Process.signal
 # Process.new
+
+pid = Process.fork do
+  sleep 0.1
+end
+
+pid = Process.fork { sleep 0.1 }
