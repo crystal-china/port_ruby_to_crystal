@@ -50,7 +50,7 @@ Dir.current
 # Process.new
 # RuntimeError
  ::Process.exec("true")
- ::Process.exec("true")
+::Process.exec("true")
 
 pid = ::Process.fork do
   sleep 0.1
