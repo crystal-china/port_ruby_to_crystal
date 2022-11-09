@@ -49,6 +49,7 @@ Dir.current
 # Process.signal
 # Process.new
 # RuntimeError
+# RuntimeError
  ::Process.exec("true")
 ::Process.exec("true")
 

@@ -49,6 +49,7 @@ Dir.pwd
 # Process.kill
 # Process.spawn
 # Errno::ESRCH
+# Errno::ENOENT
 exec("true")
 Kernel.exec("true")
 
