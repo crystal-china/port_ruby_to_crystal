@@ -50,6 +50,7 @@ Dir.pwd
 # Process.spawn
 # Errno::ESRCH
 exec("true")
+Kernel.exec("true")
 
 pid = fork do
   sleep 0.1
