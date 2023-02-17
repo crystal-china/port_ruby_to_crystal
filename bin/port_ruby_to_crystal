@@ -37,6 +37,9 @@ def replace(code)
   code.gsub!(/\$stdout\b/, '\1STDOUT')
   code.gsub!(/\$stderr\b/, '\1STDERR')
   code.gsub!(/([\w?!]+)&\.([\w?!]+)\b/, '\1.try &.\2')
+  # PR https://github.com/crystal-lang/crystal/issues/12715 was blocked.
+  # so replace rm_f into rm_rf for now
+  code.gsub!(/\bFileUtils.rm_f\b/, 'FileUtils.rm_rf')
 end
 
 if ARGV[0] == '--test'

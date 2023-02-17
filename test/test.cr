@@ -67,3 +67,5 @@ STDOUT.print ""
 STDERR.puts ""
 
 nil.try &.nil?
+
+# FileUtils.rm_rf

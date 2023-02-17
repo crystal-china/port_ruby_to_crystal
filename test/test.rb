@@ -67,3 +67,5 @@ $stdout.print ""
 $stderr.puts ""
 
 nil&.nil?
+
+# FileUtils.rm_f
