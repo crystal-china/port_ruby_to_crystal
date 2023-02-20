@@ -70,6 +70,7 @@ nil&.nil?
 
 contexts = {:context_id => "foo"}
 contexts[:context_id]&.upcase
+contexts&.[](:host) || contexts&.[](:url)
 
 # FileUtils.rm_f
 

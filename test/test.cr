@@ -70,6 +70,7 @@ nil.try &.nil?
 
 contexts = {:context_id => "foo"}
 contexts[:context_id].try &.upcase
+contexts.try &.[](:host) || contexts.try &.[](:url)
 
 # FileUtils.rm_rf
 
