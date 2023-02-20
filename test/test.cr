@@ -72,3 +72,8 @@ contexts = {:context_id => "foo"}
 contexts[:context_id].try &.upcase
 
 # FileUtils.rm_rf
+
+def aaa
+end
+def bbb; aaa; end
+bbb
