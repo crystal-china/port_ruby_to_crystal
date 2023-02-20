@@ -68,4 +68,7 @@ $stderr.puts ""
 
 nil&.nil?
 
+contexts = {:context_id => "foo"}
+contexts[:context_id]&.upcase
+
 # FileUtils.rm_f
