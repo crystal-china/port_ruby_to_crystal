@@ -78,3 +78,9 @@ def aaa
 end
 alias bbb aaa
 bbb
+
+x = <<~XML
+<parent>
+  <child />
+</parent>
+XML

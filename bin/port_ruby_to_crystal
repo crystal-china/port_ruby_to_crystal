@@ -33,6 +33,7 @@ def replace(code)
   code.gsub!(/\b\.strftime(?:\(|\s+)(?:"|')(.+?)(?:"|')\)?/, '.to_s("\1")')
   code.gsub!(/\.delete_suffix\b/, '.rstrip')
   code.gsub!(/\.delete_prefix\b/, '.lstrip')
+  # code.gsub!(/\.freeze\b/, '')
   code.gsub!(/\$stdin\b/, '\1STDIN')
   code.gsub!(/\$stdout\b/, '\1STDOUT')
   code.gsub!(/\$stderr\b/, '\1STDERR')
@@ -41,6 +42,7 @@ def replace(code)
   # so replace rm_f into rm_rf for now
   code.gsub!(/\bFileUtils.rm_f\b/, 'FileUtils.rm_rf')
   code.gsub!(/\balias\s+([\w?!]+)\s+([\w?!]+)\b/, 'def \1; \2; end')
+  code.gsub!(/<<~([A-Z_]+)/, '<<-\1')
 end
 
 if ARGV[0] == '--test'

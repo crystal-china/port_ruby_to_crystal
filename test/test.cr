@@ -78,3 +78,9 @@ def aaa
 end
 def bbb; aaa; end
 bbb
+
+x = <<-XML
+<parent>
+  <child />
+</parent>
+XML
