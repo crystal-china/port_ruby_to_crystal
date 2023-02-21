@@ -50,8 +50,6 @@ Dir.pwd
 # Process.spawn
 # Errno::ESRCH
 # Errno::ENOENT
-exec("true")
-Kernel.exec("true")
 
 pid = fork do
   sleep 0.1
@@ -68,7 +66,7 @@ $stderr.puts ""
 
 nil&.nil?
 
-contexts = {:context_id => "foo"}
+contexts = {:context_id => "foo", :host => "host", :url => "url"}
 contexts[:context_id]&.upcase
 contexts&.[](:host) || contexts&.[](:url)
 
@@ -79,8 +77,14 @@ end
 alias bbb? aaa?
 bbb?
 
+contexts.dig(:context_id)&.downcase
+contexts.find {|k, _| k.to_s == "host"}&.first
+
 x = <<~XML
 <parent>
   <child />
 </parent>
 XML
+
+exec("true")
+Kernel.exec("true")

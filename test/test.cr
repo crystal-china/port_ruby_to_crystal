@@ -50,8 +50,6 @@ Dir.current
 # Process.new
 # RuntimeError
 # RuntimeError
- ::Process.exec("true")
-::Process.exec("true")
 
 pid = ::Process.fork do
   sleep 0.1
@@ -68,7 +66,7 @@ STDERR.puts ""
 
 nil.try &.nil?
 
-contexts = {:context_id => "foo"}
+contexts = {:context_id => "foo", :host => "host", :url => "url"}
 contexts[:context_id].try &.upcase
 contexts.try &.[](:host) || contexts.try &.[](:url)
 
@@ -79,8 +77,14 @@ end
 def bbb?; aaa?; end
 bbb?
 
+contexts.dig(:context_id).try &.downcase
+contexts.find {|k, _| k.to_s == "host"}.try &.first
+
 x = <<-XML
 <parent>
   <child />
 </parent>
 XML
+
+ ::Process.exec("true")
+::Process.exec("true")
