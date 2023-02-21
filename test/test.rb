@@ -74,10 +74,10 @@ contexts&.[](:host) || contexts&.[](:url)
 
 # FileUtils.rm_f
 
-def aaa
+def aaa?
 end
-alias bbb aaa
-bbb
+alias bbb? aaa?
+bbb?
 
 x = <<~XML
 <parent>

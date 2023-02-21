@@ -74,10 +74,10 @@ contexts.try &.[](:host) || contexts.try &.[](:url)
 
 # FileUtils.rm_rf
 
-def aaa
+def aaa?
 end
-def bbb; aaa; end
-bbb
+def bbb?; aaa?; end
+bbb?
 
 x = <<-XML
 <parent>
