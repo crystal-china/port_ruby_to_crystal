@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+file=$(mktemp)
+
+cat <<'HEREDOC' > $file
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+HEREDOC
+
+rubocop -a --only Style/StringLiterals -c $file
