@@ -51,6 +51,7 @@ def replace(code)
   code.gsub!(/\bFileUtils.rm_f\b/, 'FileUtils.rm_rf')
   code.gsub!(/\balias\s+([\w?!]+)\s+([\w?!]+)$/, 'def \1; \2; end')
   code.gsub!(/<<~([A-Z_]+)/, '<<-\1')
+  code.gsub!(/\bENV\.key\?/, 'ENV.has_key?')
 end
 
 if ARGV[0] == '--test'

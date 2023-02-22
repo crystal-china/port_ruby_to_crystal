@@ -95,6 +95,8 @@ Base64.urlsafe_decode64("aGVsbG8gd29ybGQ=")
 
 Time.strptime("2000-10-31", "%Y-%m-%d")
 
+ENV.key?("CHROME_PATH")
+
 x = <<~XML
 <parent>
   <child />

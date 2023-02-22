@@ -95,6 +95,8 @@ Base64.decode_string("aGVsbG8gd29ybGQ=")
 
 Time.parse_local("2000-10-31", "%Y-%m-%d")
 
+ENV.has_key?("CHROME_PATH")
+
 x = <<-XML
 <parent>
   <child />
