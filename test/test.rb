@@ -82,6 +82,10 @@ contexts.find {|k, _| k.to_s == "host"}&.first
 
 file = Tempfile.new("htpasswd")
 
+module M
+  module_function
+end
+
 x = <<~XML
 <parent>
   <child />
