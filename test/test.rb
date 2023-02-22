@@ -108,6 +108,8 @@ Time.strptime("2000-10-31", "%Y-%m-%d")
 
 ENV.key?("CHROME_PATH")
 
+File.absolute_path("~zw963/utils/bin")
+
 x = <<~XML
 <parent>
   <child />

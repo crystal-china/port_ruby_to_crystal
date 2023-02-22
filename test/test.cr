@@ -108,6 +108,8 @@ Time.parse_local("2000-10-31", "%Y-%m-%d")
 
 ENV.has_key?("CHROME_PATH")
 
+File.expand_path("~zw963/utils/bin")
+
 x = <<-XML
 <parent>
   <child />

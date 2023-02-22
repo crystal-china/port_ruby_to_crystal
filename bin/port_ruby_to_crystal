@@ -3,6 +3,7 @@
 def replace(code)
   code.gsub!(/\bFile\.exist\?(\s*)/, 'File.exists?\1')
   code.gsub!(/\bFile\.readlines\b/, 'File.read_lines')
+  code.gsub!(/\bFile\.absolute_path\b/, 'File.expand_path')
   code.gsub!(/\bDir\.chdir\b/, 'Dir.cd')
   code.gsub!(/\bDir\.pwd\b/, 'Dir.current')
   code.gsub!(/\bProcess\.kill\b/, 'Process.signal')
