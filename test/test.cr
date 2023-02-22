@@ -86,6 +86,13 @@ module M
   extend self
 end
 
+Base64.encode("hello world")
+Base64.strict_encode("hello world")
+Base64.urlsafe_encode("hello world")
+Base64.decode("aGVsbG8gd29ybGQ=\n")
+Base64.decode_string("aGVsbG8gd29ybGQ=")
+Base64.decode_string("aGVsbG8gd29ybGQ=")
+
 x = <<-XML
 <parent>
   <child />

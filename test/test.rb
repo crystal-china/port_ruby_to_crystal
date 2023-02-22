@@ -86,6 +86,13 @@ module M
   module_function
 end
 
+Base64.encode64("hello world")
+Base64.strict_encode64("hello world")
+Base64.urlsafe_encode64("hello world")
+Base64.decode64("aGVsbG8gd29ybGQ=\n")
+Base64.strict_decode64("aGVsbG8gd29ybGQ=")
+Base64.urlsafe_decode64("aGVsbG8gd29ybGQ=")
+
 x = <<~XML
 <parent>
   <child />
