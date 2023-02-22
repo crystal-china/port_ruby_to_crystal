@@ -81,6 +81,9 @@ contexts = {:context_id => "foo", :host => "host", :url => "url"}
 contexts[:context_id].try &.upcase
 contexts.try &.[](:host) || contexts.try &.[](:url)
 
+contexts.to_h.reject(:host, :url)
+contexts.to_h.select(:host, :url)
+
 # FileUtils.rm_rf
 
 def aaa?
