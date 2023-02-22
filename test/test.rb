@@ -37,6 +37,11 @@ begin
 rescue
 end
 
+begin
+  raise RuntimeError
+rescue
+end
+
 require "socket"
 
 Errno::EADDRINUSE
