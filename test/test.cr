@@ -80,6 +80,8 @@ bbb?
 contexts.dig(:context_id).try &.downcase
 contexts.find {|k, _| k.to_s == "host"}.try &.first
 
+file = File.tempfile("htpasswd")
+
 x = <<-XML
 <parent>
   <child />
