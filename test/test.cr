@@ -93,6 +93,8 @@ Base64.decode("aGVsbG8gd29ybGQ=\n")
 Base64.decode_string("aGVsbG8gd29ybGQ=")
 Base64.decode_string("aGVsbG8gd29ybGQ=")
 
+Time.parse_local("2000-10-31", "%Y-%m-%d")
+
 x = <<-XML
 <parent>
   <child />

@@ -93,6 +93,8 @@ Base64.decode64("aGVsbG8gd29ybGQ=\n")
 Base64.strict_decode64("aGVsbG8gd29ybGQ=")
 Base64.urlsafe_decode64("aGVsbG8gd29ybGQ=")
 
+Time.strptime("2000-10-31", "%Y-%m-%d")
+
 x = <<~XML
 <parent>
   <child />
