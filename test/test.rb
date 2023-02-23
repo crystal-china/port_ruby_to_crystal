@@ -34,7 +34,7 @@ Process.getpgid(Process.pid)
 
 begin
   raise RuntimeError, "Failed"
-rescue
+rescue => e
 end
 
 begin
