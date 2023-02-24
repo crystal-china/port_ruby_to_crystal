@@ -56,6 +56,7 @@ def replace(code)
   code.gsub!(/\balias\s+([\w?!]+)\s+([\w?!]+)$/, 'def \1; \2; end')
   code.gsub!(/<<~([A-Z_]+)/, '<<-\1')
   code.gsub!(/\bENV\.key\?/, 'ENV.has_key?')
+  code.gsub!(/\bProcess\.clock_gettime\(Process::CLOCK_MONOTONIC\)/, 'Time.monotonic')
 end
 
 if ARGV[0] == '--test'

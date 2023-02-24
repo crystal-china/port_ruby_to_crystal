@@ -53,6 +53,7 @@ require "socket"
 Socket::BindError
 Time.local.to_s("%Y%m%d")
 Time.local.to_s("%-Y%m%d")
+Time.monotonic
 
 Dir.cd("/") { }
 Dir.current

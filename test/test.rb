@@ -53,6 +53,7 @@ require "socket"
 Errno::EADDRINUSE
 Time.now.strftime("%Y%m%d")
 Time.now.strftime('%-Y%m%d')
+Process.clock_gettime(Process::CLOCK_MONOTONIC)
 
 Dir.chdir("/") { }
 Dir.pwd
