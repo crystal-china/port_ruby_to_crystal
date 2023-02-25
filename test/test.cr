@@ -116,6 +116,7 @@ File.expand_path("~zw963/utils/bin")
 
 url = URI.parse("https://www.baidu.com")
 HTTP::Client.get(url)
+[ "/search", "?q=crystal"].reduce(URI.parse("https://www.google.com/")) { |a, e| a.resolve(e) }
 
 x = <<-XML
 <parent>

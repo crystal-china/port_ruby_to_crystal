@@ -116,6 +116,7 @@ File.absolute_path("~zw963/utils/bin")
 
 url = URI.parse("https://www.baidu.com")
 Net::HTTP.get(url)
+URI.join("https://www.google.com/", "/search", "?q=crystal")
 
 x = <<~XML
 <parent>
