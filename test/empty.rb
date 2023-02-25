@@ -1,3 +1,5 @@
 require 'tempfile'
 require 'base64'
 require 'time'
+require 'uri'
+require 'net/http'

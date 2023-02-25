@@ -114,6 +114,9 @@ ENV.key?("CHROME_PATH")
 
 File.absolute_path("~zw963/utils/bin")
 
+url = URI.parse("https://www.baidu.com")
+Net::HTTP.get(url)
+
 x = <<~XML
 <parent>
   <child />
