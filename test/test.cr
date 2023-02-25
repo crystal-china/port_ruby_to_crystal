@@ -115,7 +115,7 @@ ENV.has_key?("CHROME_PATH")
 File.expand_path("~zw963/utils/bin")
 
 url = URI.parse("https://www.baidu.com")
-HTTP::Client.get(url)
+HTTP::Client.get(url).body
 [ "/search", "?q=crystal"].reduce(URI.parse("https://www.google.com/")) { |a, e| a.resolve(e) }
 
 x = <<-XML
