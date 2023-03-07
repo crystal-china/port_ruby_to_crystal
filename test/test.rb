@@ -27,6 +27,7 @@ __dir__
 File.readlines("./test/test.rb")
 require 'fileutils'
 require "fileutils"
+require "securerandom"
 
 File.mtime("./test/test.rb")
 
