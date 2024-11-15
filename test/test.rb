@@ -6,6 +6,7 @@ arr = {"foo1" => "bar1"}
 arr["foo2"] || "bar2"
 arr["foo3"] ||= "bar3"
 arr["foo1"] && "ok"
+arr.key("bar1")
 
 ["hello", "world"].include? "hello"
 
